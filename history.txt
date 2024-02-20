@@ -1,0 +1,38 @@
+   task 1 Используя команду cat в терминале операционной системы Linux, создать два файла Домашние животные (заполнив файл собаками, кошками, хомяками) и Вьючные животными заполнив файл Лошадьми, верблюдами и ослы), а затем объединить их. Просмотреть содержимое созданного файла.
+
+   35  mkdir syslov
+   36  cd syslov
+   37  cat > home_animals
+   38  cat > pack_animals
+   39  cat home_animals pack_animals > animals
+   40  cat animals
+   41  mv animals mans_friends
+   42  ls -all
+
+Переименовать файл, дав ему новое имя (Друзья человека). 2. Создать директорию, переместить файл туда.
+
+   task 2
+   43  cd ..
+   44  mkdir syslov_work
+   45  cd syslov
+   46  mv mans_friends syslov_work
+   47  cd syslov_work
+   48  cd ~/syslov_work
+   49  ls -all
+
+3.Подключить дополнительный репозиторий MySQL. Установить любой пакет из этого репозитория.
+
+
+   task 3
+   58  sudo wget https://dev.mysql.com/get/mysql-apt-config_0.8.23-1_all.deb
+   59  sudo apt update
+   60  sudo dpkg -i mysql-apt-config_0.8.23-1_all.deb
+   61  sudo apt-get update
+   62  sudo apt-get install mysql-server
+
+4.Установить и удалить deb-пакет с помощью dpkg.
+
+   task 4
+   67  sudo wget https://download.docker.com/linux/ubuntu/dists/jammy/pool/stable/amd64/docker-ce-cli_20.10.13~3-0~ubuntu-jammy_amd64.deb
+   68  sudo dpkg -r docker-ce-cli
+   69  sudo dpkg -i docker-ce-cli_20.10.133-0ubuntu-jammy_amd64.deb
